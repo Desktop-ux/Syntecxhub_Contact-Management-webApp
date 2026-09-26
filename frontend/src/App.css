@@ -725,3 +725,74 @@ input {
     grid-template-columns: 1fr;
   }
 }
+
+
+.empty-icon {
+  width: 58px;
+  height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 18px;
+  border-radius: 18px;
+  background: #eee8ff;
+  color: #6d4aff;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.empty-state h3 {
+  font-size: 20px;
+}
+
+.empty-state p {
+  margin-bottom: 20px;
+}
+
+.empty-add-button {
+  padding: 11px 18px;
+  border: none;
+  border-radius: 10px;
+  background: #6d4aff;
+  color: #ffffff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+
+.contact-row {
+  transition: background 0.2s ease;
+  border-radius: 12px;
+}
+
+.contact-row:hover {
+  background: #faf9ff;
+}
+
+.contact-actions button {
+  transition: 0.2s ease;
+}
+
+.contact-actions button:hover {
+  border-color: #6d4aff;
+  color: #6d4aff;
+}
+
+.add-contact-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  border: none;
+  padding: 13px 20px;
+  border-radius: 12px;
+  background: #6d4aff;
+  color: #ffffff;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.add-contact-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(109, 74, 255, 0.2);
+}

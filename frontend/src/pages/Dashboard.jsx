@@ -133,7 +133,8 @@ const Dashboard = ({ onLogout }) => {
                         </div>
 
                         <span className="contact-count">
-                            {contacts.length} contacts
+                            {contacts.length}{" "}
+                            {contacts.length === 1 ? "contact" : "contacts"}
                         </span>
                     </div>
 
@@ -160,7 +161,31 @@ const Dashboard = ({ onLogout }) => {
 
                     {loading ? (
                         <div className="empty-state">
-                            Loading contacts...
+                            <div className="empty-icon">+</div>
+
+                            <h3>
+                                {search || category !== "All"
+                                    ? "No contacts found"
+                                    : "Your contact list is empty"}
+                            </h3>
+
+                            <p>
+                                {search || category !== "All"
+                                    ? "Try changing your search or filter."
+                                    : "Add your first contact to get started."}
+                            </p>
+
+                            {!search && category === "All" && (
+                                <button
+                                    className="empty-add-button"
+                                    onClick={() => {
+                                        setEditingContact(null);
+                                        setShowForm(true);
+                                    }}
+                                >
+                                    + Add Contact
+                                </button>
+                            )}
                         </div>
                     ) : contacts.length === 0 ? (
                         <div className="empty-state">
